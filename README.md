@@ -31,7 +31,7 @@ Custom integrations use GRPC with Mutual TLS authentication. The [hf](https://gi
 1. [Authenticate](https://docs.humanfirst.ai/docs/cli/overview#authenticating) using your HF account
 1. Create the integration
     ```
-    hf integrations create custom  --name my-integration --address remote-host.example.com:8443 --key-out ./mtls-credentials.json
+    hf integrations create custom --workspace --name my-integration --address remote-host.example.com:8443 --key-out ./mtls-credentials.json
     ```
 1. Launch the integration service: `poetry install && poetry run python3 -m example_integration.main ./mtls-credentials.json 0.0.0.0:8443`
 
